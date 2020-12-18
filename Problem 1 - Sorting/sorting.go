@@ -11,6 +11,7 @@ import (
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
+
 	input := scanner.Text()
 	numStrings := strings.Split(input, ", ")
 
@@ -38,14 +39,13 @@ func main() {
 		i++
 	}
 
-	insertionsort(numbers, max)
+	// insertionsort(numbers, max)
+	reverseInsertionsort(numbers, max)
 }
 
 func visualization(data []int, max int) {
-	i := 0
-	for i <= max {
-		j := 0
-		for j < len(data) {
+	for i := 0; i <= max; i++ {
+		for j := 0; j < len(data); j++ {
 			if i != max {
 				if data[j] >= max-i {
 					fmt.Print("|")
@@ -57,12 +57,11 @@ func visualization(data []int, max int) {
 			}
 
 			fmt.Print(" ")
-			j++
 		}
 
 		fmt.Println()
-		i++
 	}
+
 	fmt.Println()
 }
 
@@ -71,12 +70,25 @@ func insertionsort(data []int, max int) {
 
 	var n = len(data)
 	for i := 1; i < n; i++ {
-		j := i
-		for j > 0 {
+		for j := i; j > 0; j-- {
 			if data[j-1] > data[j] {
 				data[j-1], data[j] = data[j], data[j-1]
 			}
-			j = j - 1
+		}
+
+		visualization(data, max)
+	}
+}
+
+func reverseInsertionsort(data []int, max int) {
+	visualization(data, max)
+
+	var n = len(data)
+	for i := 1; i < n; i++ {
+		for j := i; j > 0; j-- {
+			if data[j-1] < data[j] {
+				data[j-1], data[j] = data[j], data[j-1]
+			}
 		}
 
 		visualization(data, max)
