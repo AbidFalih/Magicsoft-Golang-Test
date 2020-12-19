@@ -15,6 +15,7 @@ Sehingga saya mengimplementasikan queue dalam bentuk function dan menaruhnya di 
 ---
 
 **using function**
+
 Main program yang berada pada `using function` ini dicopy dari queue_test, hanya memodifikasi syntax pemanggilan fungsinya dan menyesuaikan parameter dari fungsi yang dibuat.
 
 Pada `using function` ini terdapat beberapa function yang digunakan untuk queue, yaitu:
@@ -22,11 +23,13 @@ Pada `using function` ini terdapat beberapa function yang digunakan untuk queue,
 - New -> create new queue
 - Push -> insert data to queue
 - Keys -> print all data in queue
-- Contains -> check if a specific data already exist in queue \* Pop -> print the first data in queue and reduce the queue size
+- Contains -> check if a specific data already exist in queue
+- Pop -> print the first data in queue and reduce the queue size
 
 `using function` tersebut dijalankan dengan `go run queue-function.go` dan console akan menampilkan hasil Test Push dan Test Pop.
 
 ---
 
 **using interface**
+
 Code error, belum selesai.. ..
