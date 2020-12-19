@@ -39,7 +39,6 @@ func main() {
 		i++
 	}
 
-	// insertionsort(numbers, max)
 	reverseInsertionsort(numbers, max)
 }
 
@@ -63,21 +62,6 @@ func visualization(data []int, max int) {
 	}
 
 	fmt.Println()
-}
-
-func insertionsort(data []int, max int) {
-	visualization(data, max)
-
-	var n = len(data)
-	for i := 1; i < n; i++ {
-		for j := i; j > 0; j-- {
-			if data[j-1] > data[j] {
-				data[j-1], data[j] = data[j], data[j-1]
-			}
-		}
-
-		visualization(data, max)
-	}
 }
 
 func reverseInsertionsort(data []int, max int) {
