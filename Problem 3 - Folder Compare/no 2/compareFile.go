@@ -64,6 +64,3 @@ func searchTheDiff(dir1 []string, dir2 []string, label string, modif bool) {
 		}
 	}
 }
-
-//source: https://stackoverflow.com/questions/31729262/go-iterate-through-directores-files-in-current-directory
-//https://stackoverflow.com/questions/29505089/how-can-i-compare-two-files-in-golang

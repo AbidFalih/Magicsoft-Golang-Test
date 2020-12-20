@@ -54,5 +54,3 @@ func searchTheDiff(dir1 []string, dir2 []string, label string) {
 		}
 	}
 }
-
-//source: https://stackoverflow.com/questions/31729262/go-iterate-through-directores-files-in-current-directory
